@@ -200,3 +200,52 @@ font-family : "Times New Roman", Times, serif;
  -> 예제 확인
 + CSS에서도 동일하게 코드 작성, @import형태로 존재
 + 스타일 시트를 작성하는 곳에 추가되어야함
+
+### 링크와 리스트 스타일
+
+#### 링크에 사용 가능한 속성
++ color, background-colortext, font속성, display 속성 등이 있다.
++ 링크엔 다양한 상태가 존재
+    + link : 기본 상태
+    + hover : 마우스 오버 상태
+    + active : 마우스 클릭 상태
+    + visited : 방문했던 링크
+    + focus : 포커스를 가진 상태
++ 선택자와 상태를 콜론:으로 연결하면 사용
+```css
+a : hover {
+    color : red;
+}
+```
+
+
+#### 리스트 스타일
++ 앞머리 기호를 지정하는 속성
+```css
+<style>
+ul {
+    list-style : circle;
+}
+</style>
+```
+
+### 가상 선택자
++ HTML 웹 문서에 실제로 존재하지는 않지만 필요에 의해서 임의로 지정한 선택자
++ 변수와 비슷한듯?
++ :link, :hover, :focus 같은 것들이 존재
++ 다양한 선택자가 존재
+
+#### 구조적인 가상 선택자
+
++ 어떤 요소가 어느 위치에 존재 하는지에 따라 다른 스타일을 지정
+```css
+/* 첫번째와 마지막 자식 요소에 적용 */
+.parent div:first-child,
+        .parent div:last-child {
+            background-color: pink;
+        }
+```
++ ntn-child(순서) : 순서를 지정
+    + even : 짝수
+    + odd : 홀수
+    

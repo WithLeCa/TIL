@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .children {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-color: skyblue;
+        }
+        .parent div:first-child,
+        .parent div:last-child {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="children">1</div>
+        <div class="children">2</div>
+        <div class="children">3</div>
+        <div class="children">4</div>
+        <div class="children">5</div>
+    </div>
+</body>
+</html>
